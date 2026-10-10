@@ -39,17 +39,23 @@ export default function Home() {
     <>
       {/* Navbar */}
       <header className="sticky top-0 z-40 border-b border-arena bg-crema/90 backdrop-blur">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <span className="text-lg font-extrabold tracking-wide">
-            DESING <span className="font-medium text-madera">Amoblamientos</span>
-          </span>
-          <ul className="hidden gap-8 text-sm font-medium md:flex">
-            <li><a href="#servicios" className="hover:text-madera">Servicios</a></li>
-            <li><a href="#trabajos" className="hover:text-madera">Trabajos</a></li>
-            <li><a href="#proceso" className="hover:text-madera">Proceso</a></li>
-            <li><a href="#contacto" className="hover:text-madera">Contacto</a></li>
-          </ul>
-        </nav>
+       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+  <span className="text-base font-extrabold tracking-wide sm:text-lg">
+    DESING <span className="font-medium text-madera">Amoblamientos</span>
+  </span>
+  <ul className="hidden gap-8 text-sm font-medium md:flex">
+    <li><a href="#servicios" className="hover:text-madera">Servicios</a></li>
+    <li><a href="#trabajos" className="hover:text-madera">Trabajos</a></li>
+    <li><a href="#proceso" className="hover:text-madera">Proceso</a></li>
+    <li><a href="#contacto" className="hover:text-madera">Contacto</a></li>
+  </ul>
+  <a
+    href="#contacto"
+    className="rounded-full bg-carbon px-4 py-2 text-sm font-semibold text-crema md:hidden"
+  >
+    Contacto
+  </a>
+</nav>
       </header>
 
       <main>
@@ -65,14 +71,12 @@ export default function Home() {
               sin cargo.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-carbon px-7 py-3 font-semibold text-crema transition hover:bg-madera"
-              >
-                Pedí tu presupuesto
-              </a>
+          <a
+  href="#contacto"
+  className="rounded-full bg-carbon px-7 py-3 font-semibold text-crema transition hover:bg-madera"
+>
+  Pedí tu presupuesto
+</a>
               <a
                 href="#trabajos"
                 className="rounded-full border-2 border-carbon px-7 py-3 font-semibold transition hover:bg-carbon hover:text-crema"
@@ -193,7 +197,7 @@ export default function Home() {
             {SITE.phones.join(" · ")} — {SITE.location}
           </p>
           <p className="mt-6 text-xs text-carbon/50">
-            © {new Date().getFullYear()} {SITE.name}. Todos los derechos reservados.
+            © 2026 {SITE.name}. Todos los derechos reservados.
           </p>
         </div>
       </footer>
